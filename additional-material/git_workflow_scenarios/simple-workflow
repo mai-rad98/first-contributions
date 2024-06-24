@@ -1,0 +1,52 @@
+# Gitflow Workflow Commands
+
+## 1. Initialize Git Repository
+```sh
+git init
+git remote add origin <remote-repository-url>
+```
+## 2. Main and Develop Branches
+
+Create and Push Main Branch
+```sh
+git checkout -b main
+git push -u origin main
+```
+# Create and Push Develop Branch from Main
+```sh
+git checkout -b develop 
+git push -u origin develop
+```
+
+## 3. Feature Branch
+
+## Create Feature Branch from Develop
+```sh
+git checkout -b feature/<feature-name> develop
+```
+
+## 4. Feature Branch
+
+Work on Feature and Commit Changes
+```sh
+git add .
+git commit -m "Add new feature <feature-name>"
+```
+
+Push Feature Branch to Remote
+```sh
+git push -u origin feature/<feature-name>
+```
+
+## 5. Merge Feature Branch back into Develop after Completion
+
+Push Feature Branch to Remote
+```sh
+git checkout develop
+git merge feature/<feature-name>
+```
+Push Develop Branch with Merged Changes
+```sh
+git push origin develop
+```
+
