@@ -63,3 +63,18 @@ To list all branches:
 ```sh
 git config --global alias.br 'branch'
 ```
+## Combining Aliases
+
+You can combine multiple Git commands into a single alias. For example, to add all changes and commit them with a message:
+
+```sh
+git config --global alias.ac '!git add -A && git commit -m'
+```
+
+## Removing Aliases
+
+To remove an alias, use the `--unset` option:
+
+```sh
+git config --global --unset alias
+```
