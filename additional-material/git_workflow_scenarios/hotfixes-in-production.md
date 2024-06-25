@@ -11,11 +11,14 @@ This guide will walk you through the steps to create a hotfix, test it, and merg
 
 First, you need to create a new branch from the `main` (or `production`) branch. This new branch is where you will make your hotfix changes.
 
-**Command:**
 
 ```sh
 git checkout main
-git pull origin main  # Ensure you have the latest changes
+git pull origin main  
+```
+
+# Ensure you have the latest changes
+```sh
 git checkout -b hotfix/<hotfix-name>
 ```
 
@@ -25,7 +28,6 @@ Replace `<hotfix-name>` with a meaningful name for your hotfix.
 
 Next, you will make the necessary changes to fix the issue. Once the changes are made, you need to commit them.
 
-**Commands:**
 
 ```sh
 # Make your changes in your editor
@@ -46,7 +48,6 @@ Once the hotfix has been tested and is confirmed to be working, you need to merg
 
 After the hotfix has been merged and pushed to both branches, you can delete the hotfix branch as it is no longer needed.
 
-**Command:**
 
 ```sh
 git branch -d hotfix/<hotfix-name>
